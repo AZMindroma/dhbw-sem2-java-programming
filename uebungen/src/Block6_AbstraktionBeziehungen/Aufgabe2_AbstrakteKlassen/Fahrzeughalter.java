@@ -1,4 +1,4 @@
-package Block6_AbstraktionBeziehungen.Aufgabe1_Beziehungen;
+package Block6_AbstraktionBeziehungen.Aufgabe2_AbstrakteKlassen;
 
 public class Fahrzeughalter {
     private Fahrzeug fz;

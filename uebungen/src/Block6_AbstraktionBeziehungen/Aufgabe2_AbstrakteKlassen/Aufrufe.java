@@ -1,9 +1,9 @@
-package Block6_AbstraktionBeziehungen.Aufgabe1_Beziehungen;
+package Block6_AbstraktionBeziehungen.Aufgabe2_AbstrakteKlassen;
 
 public class Aufrufe {
     public static void main(String[] args) {
         Fahrzeughalter halter = new Fahrzeughalter("AZMindroma");
-        Fahrzeug fahrzeug = new Fahrzeug(halter, 16);
+        Fahrzeug fahrzeug = new Pkw(halter, 16, 4);
         halter.setFahrzeug(fahrzeug);
 
         System.out.println(halter);

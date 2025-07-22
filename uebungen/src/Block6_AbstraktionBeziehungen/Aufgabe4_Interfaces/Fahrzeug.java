@@ -1,36 +1,38 @@
-package Block6_AbstraktionBeziehungen.Aufgabe1_Beziehungen;
+package Block6_AbstraktionBeziehungen.Aufgabe4_Interfaces;
 
-public class Fahrzeug {
-    private final Fahrzeughalter halter;
-
-    private final String fahrzeugart;
-    private final int anzahlRaeder;
+public abstract class Fahrzeug {
+    private String fahrzeugart;
+    private int anzahlRaeder;
+    private Fahrzeughalter halter;
 
     public Fahrzeug(Fahrzeughalter halter, int anzahlRaeder) {
         this.halter = halter;
         this.anzahlRaeder = anzahlRaeder;
         this.fahrzeugart = "allgemeines Fahrzeug";
+        halter.setFahrzeug(this);
     }
 
     public Fahrzeug(Fahrzeughalter halter, String fahrzeugart, int anzahlRaeder) {
         this.halter = halter;
         this.fahrzeugart = fahrzeugart;
         this.anzahlRaeder = anzahlRaeder;
+        halter.setFahrzeug(this);
     }
 
     public Fahrzeughalter getHalter() {
         return halter;
     }
 
-    public String gibFahrzeugart() {
+    public String getFahrzeugart() {
         return fahrzeugart;
     }
 
-    public int gibAnzahlRaeder() {
+    public int getAnzahlRaeder() {
         return anzahlRaeder;
     }
 
+    @Override
     public String toString() {
-        return String.format("Dieses Fahrzeug ist ein %s mit %d Rädern. Es gehört %s.", this.fahrzeugart, this.anzahlRaeder, this.halter.getName());
+        return "ein " + fahrzeugart + " mit " + anzahlRaeder + " Rädern";
     }
 }

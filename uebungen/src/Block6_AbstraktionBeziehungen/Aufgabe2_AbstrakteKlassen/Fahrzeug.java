@@ -1,16 +1,10 @@
-package Block6_AbstraktionBeziehungen.Aufgabe1_Beziehungen;
+package Block6_AbstraktionBeziehungen.Aufgabe2_AbstrakteKlassen;
 
-public class Fahrzeug {
+public abstract class Fahrzeug {
     private final Fahrzeughalter halter;
 
     private final String fahrzeugart;
     private final int anzahlRaeder;
-
-    public Fahrzeug(Fahrzeughalter halter, int anzahlRaeder) {
-        this.halter = halter;
-        this.anzahlRaeder = anzahlRaeder;
-        this.fahrzeugart = "allgemeines Fahrzeug";
-    }
 
     public Fahrzeug(Fahrzeughalter halter, String fahrzeugart, int anzahlRaeder) {
         this.halter = halter;

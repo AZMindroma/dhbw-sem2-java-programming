@@ -1,4 +1,4 @@
-package Block6_AbstraktionBeziehungen.Aufgabe1_Beziehungen;
+package Block6_AbstraktionBeziehungen.Aufgabe3_Firmen;
 
 public class Pkw extends Fahrzeug {
     private int anzahlTueren;
@@ -12,7 +12,8 @@ public class Pkw extends Fahrzeug {
         return anzahlTueren;
     }
 
+    @Override
     public String toString() {
-        return String.format("Dieses Fahrzeug ist ein %s mit %d Rädern und %d Türen. Es gehört %s.", this.gibFahrzeugart(), this.gibAnzahlRaeder(), this.gibAnzahlTueren(), this.getHalter().getName());
+        return super.toString();
     }
 }
